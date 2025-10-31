@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Minesweeper</string>
+    <string name="titleText">Minesweeper</string>
+    <string name="logoDescription">Design of the app logo depicting a mine being swept up by a broom</string>
+    <string name="menuHomeButtonText">Home</string>
+    <string name="menuGameButtonText">Game</string>
+    <string name="menuSettingsButtonText">Settings</string>
+    <string name="homeInstructionsText">Click tiles to reveal numbers.\n\nNumbers show how many mines touch that tile.\n\nUse logic to mark mines with flags.\n\nClear all safe tiles to win.\n\nHit a mine, lose.</string>
+</resources>

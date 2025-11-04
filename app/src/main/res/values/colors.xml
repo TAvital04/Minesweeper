@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="defaultItemColor">#C6C6CD</color>
-    <color name="backgroundColor">#E8E8EF</color>
-    <color name="secondaryItemColor">#D7D7DE</color>
+
+    <!-- Base -->
+    <color name="color_background">#F1EDE7</color>
+    <color name="color_surface">#DBD1C7</color>
+    <color name="color_surface_secondary">#E5DED6</color>
+    <color name="color_outline">#D2C7BB</color>
+    <color name="color_black_soft">#1E1B18</color>
+    <color name="color_white_warm">#FFFBF7</color>
+
+    <!-- Text -->
+    <color name="color_on_background">#3B342E</color>
+    <color name="color_on_surface">#6A5A4E</color>
+    <color name="color_text_muted">#6E645C</color>
+
+    <!-- Accents -->
+    <color name="color_accent_red">#C96A63</color>
+    <color name="color_accent_orange">#D99363</color>
+    <color name="color_accent_yellow">#D9C25E</color>
+    <color name="color_accent_green">#6FA685</color>
+    <color name="color_accent_blue">#6F8FC6</color>
+    <color name="color_accent_purple">#A687CF</color>
+    <color name="color_accent_pink">#CC7FA4</color>
+
+    <!-- Utility -->
+    <color name="color_success">#6FA685</color>
+    <color name="color_warning">#D9C25E</color>
+    <color name="color_error">#C96A63</color>
+
 </resources>

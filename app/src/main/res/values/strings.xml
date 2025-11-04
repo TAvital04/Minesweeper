@@ -6,4 +6,6 @@
     <string name="menuGameButtonText">Game</string>
     <string name="menuSettingsButtonText">Settings</string>
     <string name="homeInstructionsText">Click tiles to reveal numbers.\n\nNumbers show how many mines touch that tile.\n\nUse logic to mark mines with flags.\n\nClear all safe tiles to win.\n\nHit a mine, lose.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -4,31 +4,36 @@ import android.graphics.Color;
 
 public class ColorSettings {
     // Variables
-    private Color coveredCell;
-    private Color uncoveredCell;
-    private Color suspectedCell;
-    private Color mine;
+    private int coveredCell;
+    private int uncoveredCell;
+    private int suspectedCell;
+    private int mine;
 
     // Constructors
-
+    public ColorSettings() {
+        coveredCell = R.color.primaryColor;
+        uncoveredCell = R.color.secondaryColor;
+        suspectedCell = R.color.orange;
+        mine = R.color.red;
+    }
 
     // Methods
 
 
     // Getters/Setters
-    public Color getCoveredCell() {
+    public int getCoveredCell() {
         return coveredCell;
     }
 
-    public Color getUncoveredCell() {
+    public int getUncoveredCell() {
         return uncoveredCell;
     }
 
-    public Color getSuspectedCell() {
+    public int getSuspectedCell() {
         return suspectedCell;
     }
 
-    public Color getMine() {
+    public int getMine() {
         return mine;
     }
 }

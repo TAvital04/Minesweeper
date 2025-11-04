@@ -7,7 +7,11 @@ public class Minesweeper {
     private boolean started;
 
     // Constructors
-
+    public Minesweeper() {
+        grid = new Grid();
+        colorSettings = new ColorSettings();
+        started = false;
+    }
 
     // Methods
     public void printMinesweeper() {

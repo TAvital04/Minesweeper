@@ -3,7 +3,7 @@
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
             <corners android:radius="15dp"/>
-            <solid android:color="@color/backgroundColor"/>
+            <solid android:color="@color/color_background"/>
             <size android:height="4dp"/> <!-- Adjust based on rectangle height -->
         </shape>
     </item>
@@ -12,7 +12,7 @@
     <item android:id="@android:id/progress">
         <shape android:shape="rectangle">
             <corners android:radius="15dp"/>
-            <solid android:color="@color/backgroundColor"/>
+            <solid android:color="@color/color_background"/>
             <size android:height="4dp"/>
         </shape>
     </item>

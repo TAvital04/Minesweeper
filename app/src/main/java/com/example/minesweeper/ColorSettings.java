@@ -1,6 +1,7 @@
 package com.example.minesweeper;
 
 import android.graphics.Color;
+import android.os.Bundle;
 
 public class ColorSettings {
     // Variables
@@ -15,6 +16,13 @@ public class ColorSettings {
         uncoveredCell = R.color.color_surface_secondary;
         suspectedCell = R.color.color_accent_orange;
         mine = R.color.color_accent_red;
+    }
+
+    public ColorSettings(int coveredCell, int uncoveredCell, int suspectedCell, int mine) {
+        this.coveredCell = coveredCell;
+        this.uncoveredCell = uncoveredCell;
+        this.suspectedCell = suspectedCell;
+        this.mine = mine;
     }
 
     // Methods
@@ -35,5 +43,25 @@ public class ColorSettings {
 
     public int getMine() {
         return mine;
+    }
+
+    public Bundle getBundle() {
+        Bundle result = new Bundle();
+
+        result.putInt("coveredCell", coveredCell);
+        result.putInt("uncoveredCell", uncoveredCell);
+        result.putInt("suspectedCell", suspectedCell);
+        result.putInt("mine", mine);
+
+        return result;
+    }
+
+    public static ColorSettings getFromBundle(Bundle bundle) {
+        int coveredCell = bundle.getInt("coveredCell");
+        int uncoveredCell = bundle.getInt("uncoveredCell");
+        int suspectedCell = bundle.getInt("suspectedCell");
+        int mine = bundle.getInt("mine");
+
+        return new ColorSettings(coveredCell, uncoveredCell, suspectedCell, mine);
     }
 }

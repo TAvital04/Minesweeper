@@ -1,8 +1,12 @@
 package com.example.minesweeper;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -23,8 +27,28 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // The app just started up, and it's on the instructions screen
-            // Instantiate a Minesweeper object to default settings
-            game = new Minesweeper();
+        // Navigate between activities
+        Intent settingsIntent = new Intent(this, SettingsActivity.class);
+
+        Button settingsButton = findViewById(R.id.menuSettingsButton);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingsIntent.putExtra("game", game.getBundle());
+                startActivity(settingsIntent);
+            }
+        });
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBundle("game", game.getBundle());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        game = Minesweeper.getFromBundle(savedInstanceState.getBundle("game"));
     }
 }

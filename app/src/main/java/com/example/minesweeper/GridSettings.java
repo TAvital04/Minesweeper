@@ -1,6 +1,7 @@
 package com.example.minesweeper;
 
 import android.graphics.Color;
+import android.os.Bundle;
 
 public class GridSettings {
     // Variables
@@ -9,7 +10,11 @@ public class GridSettings {
     private int mines;
 
     // Constructors
-
+    public GridSettings(int rows, int columns, int mines) {
+        this.rows = rows;
+        this.columns = columns;
+        this.mines = mines;
+    }
 
     // Methods
 
@@ -25,5 +30,23 @@ public class GridSettings {
 
     public int getMines() {
         return mines;
+    }
+
+    public Bundle getBundle() {
+        Bundle result = new Bundle();
+
+        result.putInt("rows", rows);
+        result.putInt("columns", columns);
+        result.putInt("mines", mines);
+
+        return result;
+    }
+
+    public static GridSettings getFromBundle(Bundle bundle) {
+        int rows = bundle.getInt("rows");
+        int columns = bundle.getInt("columns");
+        int mines = bundle.getInt("mines");
+
+        return new GridSettings(rows, columns, mines);
     }
 }

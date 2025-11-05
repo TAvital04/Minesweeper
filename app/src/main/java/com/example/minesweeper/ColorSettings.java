@@ -11,10 +11,10 @@ public class ColorSettings {
 
     // Constructors
     public ColorSettings() {
-        coveredCell = R.color.primaryColor;
-        uncoveredCell = R.color.secondaryColor;
-        suspectedCell = R.color.orange;
-        mine = R.color.red;
+        coveredCell = R.color.color_surface;
+        uncoveredCell = R.color.color_surface_secondary;
+        suspectedCell = R.color.color_accent_orange;
+        mine = R.color.color_accent_red;
     }
 
     // Methods

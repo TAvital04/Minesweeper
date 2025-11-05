@@ -37,7 +37,7 @@
         android:textColor="@color/color_on_surface"
         android:textSize="18sp"
         app:cornerRadius="@dimen/cornerRadius"
-        app:layout_constraintBottom_toTopOf="@+id/homeMenuButton"
+        app:layout_constraintBottom_toTopOf="@+id/menuGameButton"
         app:layout_constraintEnd_toEndOf="@+id/titleText"
         app:layout_constraintStart_toStartOf="@+id/titleText"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -66,13 +66,13 @@
         app:backgroundTint="@color/color_surface"
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homeMenuButton"
+        app:layout_constraintEnd_toStartOf="@+id/menuGameButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/homeMenuButton"
+        android:id="@+id/menuGameButton"
         android:layout_width="@dimen/menuButtonWidth"
         android:layout_height="65dp"
         android:fontFamily="@font/adlam_display"
@@ -97,7 +97,7 @@
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homeMenuButton"
+        app:layout_constraintStart_toEndOf="@+id/menuGameButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 

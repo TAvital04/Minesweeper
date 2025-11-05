@@ -8,15 +8,6 @@
     android:background="@color/color_background"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/homeMenuButton"
-        app:layout_constraintTop_toBottomOf="@+id/titleText"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="0dp" />
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/titleText"
         android:layout_width="369dp"
@@ -27,15 +18,25 @@
         android:textColor="@color/color_on_surface"
         android:textSize="50sp"
         app:cornerRadius="@dimen/cornerRadius"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/menuSettingsButton"
-        app:layout_constraintStart_toStartOf="@+id/menuHomeButton"
+        app:layout_constraintBottom_toTopOf="@+id/settingsGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012"
+        app:layout_constraintVertical_bias="0.060000002"
         tools:text="@string/titleText" />
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.minesweeper.GridSettingsFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/settingsGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/menuHomeButton"
+        android:id="@+id/settingsHomeButton"
         android:layout_width="@dimen/menuButtonWidth"
         android:layout_height="65dp"
         android:fontFamily="@font/adlam_display"
@@ -44,13 +45,13 @@
         app:backgroundTint="@color/color_surface"
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homeMenuButton"
+        app:layout_constraintEnd_toStartOf="@+id/settingsGameButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/homeMenuButton"
+        android:id="@+id/settingsGameButton"
         android:layout_width="@dimen/menuButtonWidth"
         android:layout_height="65dp"
         android:fontFamily="@font/adlam_display"
@@ -59,23 +60,23 @@
         app:backgroundTint="@color/color_surface"
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/menuSettingsButton"
-        app:layout_constraintStart_toEndOf="@+id/menuHomeButton"
+        app:layout_constraintEnd_toStartOf="@+id/settingsSwitchButton"
+        app:layout_constraintStart_toEndOf="@+id/settingsHomeButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/menuSettingsButton"
+        android:id="@+id/settingsSwitchButton"
         android:layout_width="@dimen/menuButtonWidth"
         android:layout_height="65dp"
         android:fontFamily="@font/adlam_display"
-        android:text="@string/menuSettingsButtonText"
+        android:text="@string/settingsSwitchButtonColorSettings"
         android:textColor="@color/color_on_surface"
         app:backgroundTint="@color/color_surface"
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homeMenuButton"
+        app:layout_constraintStart_toEndOf="@+id/settingsGameButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 

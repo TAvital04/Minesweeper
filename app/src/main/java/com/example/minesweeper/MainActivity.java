@@ -27,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Navigate between activities
+        // Instantiate the game
+        game = new Minesweeper();
+
+        // Navigate to settings
         Intent settingsIntent = new Intent(this, SettingsActivity.class);
 
         Button settingsButton = findViewById(R.id.menuSettingsButton);

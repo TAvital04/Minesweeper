@@ -54,6 +54,6 @@ public class Minesweeper {
         ColorSettings colorSetting = ColorSettings.getFromBundle(bundle.getBundle("colorSettings"));
         boolean started = bundle.getBoolean("started");
 
-        return new Minesweeper(grid, colorSettings, started);
+        return new Minesweeper(grid, colorSetting, started);
     }
 }

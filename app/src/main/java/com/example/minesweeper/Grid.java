@@ -3,23 +3,65 @@ package com.example.minesweeper;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Grid {
     // Variables
-    private int[][] gameState;
+    private CellStates[][] gameState;
     private GridSettings gridSettings;
 
     // Constructors
-    public Grid(int[][] gameState, GridSettings gridSettings) {
+    public Grid() {
+        gridSettings = new GridSettings();
+        gameState = generateNewGameState(gridSettings);
+    }
+    public Grid(CellStates[][] gameState, GridSettings gridSettings) {
         this.gameState = gameState;
         this.gridSettings = gridSettings;
     }
 
+    // Enums
+    public enum CellStates {
+        COVERED,
+        UNCOVERED,
+        SUSPECTED,
+        MINE
+    }
+
     // Methods
+    public CellStates[][] generateNewGameState(GridSettings gridSettings) {
+        CellStates[][] result = new CellStates[gridSettings.getRows()][gridSettings.getColumns()];
+
+        for(CellStates[] row: result) {
+            for(CellStates cell: row) {
+                cell = CellStates.COVERED;
+            }
+        }
+
+        double percentMines = gridSettings.getMines()/100.0;
+        int mines = (int)(percentMines * gridSettings.getRows() * gridSettings.getColumns());
+
+        Random random = new Random();
+        boolean done;
+        for(int i = 0; i < mines; i++) {
+            done = false;
+            while(!done) {
+                int row = (int)(random.nextInt(gridSettings.getRows()));
+                int column = (int)(random.nextInt(gridSettings.getColumns()));
+
+                if(result[row][column] != CellStates.MINE) {
+                    result[row][column] = CellStates.MINE;
+                    done = true;
+                }
+            }
+        }
+
+        return result;
+    }
 
 
     // Getters/Setters
-    public int[][] getGameState() {
+    public CellStates[][] getGameState() {
         return gameState;
     }
 
@@ -30,9 +72,27 @@ public class Grid {
         result.putInt("columns", gameState[0].length);
 
         ArrayList<Integer> gridArrayList = new ArrayList<>();
-        for(int[] row: gameState) {
-            for(int cell: row) {
-                gridArrayList.add(cell);
+        for(CellStates[] row: gameState) {
+            for(CellStates cell: row) {
+                int cellAsInt;
+                switch(cell) {
+                    case COVERED:
+                        cellAsInt = 0;
+                        break;
+                    case UNCOVERED:
+                        cellAsInt = 1;
+                        break;
+                    case SUSPECTED:
+                        cellAsInt = 2;
+                        break;
+                    case MINE:
+                        cellAsInt = 3;
+                        break;
+                    default:
+                        cellAsInt = -1;
+                        break;
+                }
+                gridArrayList.add(cellAsInt);
             }
         }
 
@@ -48,12 +108,29 @@ public class Grid {
         int columns = bundle.getInt("columns");
         ArrayList<Integer> gridArrayList = bundle.getIntegerArrayList("grid");
 
-        int[][] grid = new int[rows][columns];
+        CellStates[][] grid = new CellStates[rows][columns];
 
         int gridArrayListIndex = 0;
         for(int i = 0; i < rows; i++) {
             for(int j = 0; j < columns; j++) {
-                grid[i][j] = gridArrayList.get(gridArrayListIndex);
+                CellStates cellAsCellStates;
+                switch(gridArrayList.get(gridArrayListIndex)) {
+                    case 0:
+                        cellAsCellStates = CellStates.COVERED;
+                        break;
+                    case 1:
+                        cellAsCellStates = CellStates.UNCOVERED;
+                        break;
+                    case 2:
+                        cellAsCellStates = CellStates.SUSPECTED;
+                        break;
+                    case 3:
+                        cellAsCellStates = CellStates.MINE;
+                        break;
+                    default:
+                        throw new IllegalArgumentException("There was a problem unpacking the grid bundle");
+                }
+                grid[i][j] = cellAsCellStates;
                 gridArrayListIndex++;
             }
         }

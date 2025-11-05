@@ -1,5 +1,6 @@
 package com.example.minesweeper;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +25,7 @@ public class SettingsActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_settings);
 
-        // Switch fragments functionality
+        // Switch fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         if(savedInstanceState == null) {
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -60,6 +61,18 @@ public class SettingsActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.fragmentContainerView, new GridSettingsFragment());
                     fragmentTransaction.commit();
                 }
+            }
+        });
+
+        // Navigate to home
+        Intent homeIntent = new Intent();
+
+        Button homeButton = findViewById(R.id.settingsHomeButton);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeIntent.putExtra("game", game.getBundle());
+                finish();
             }
         });
     }

@@ -10,6 +10,11 @@ public class GridSettings {
     private int mines;
 
     // Constructors
+    public GridSettings() {
+        this.rows = 7;
+        this.columns = 7;
+        this.mines = 15;
+    }
     public GridSettings(int rows, int columns, int mines) {
         this.rows = rows;
         this.columns = columns;

@@ -10,4 +10,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="settingsSwitchButtonColorSettings">Color Settings</string>
     <string name="settingsSwitchButtonGridSettings">Grid Settings</string>
+    <string name="homePlayButton">Play Game</string>
 </resources>

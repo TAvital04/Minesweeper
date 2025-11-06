@@ -20,8 +20,8 @@
         android:textSize="50sp"
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/menuSettingsButton"
-        app:layout_constraintStart_toStartOf="@+id/menuHomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0500000" />
 
@@ -56,47 +56,17 @@
         app:srcCompat="@drawable/logo" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/menuHomeButton"
-        android:layout_width="@dimen/menuButtonWidth"
-        android:layout_height="65dp"
-        android:fontFamily="@font/adlam_display"
-        android:text="@string/menuHomeButtonText"
-        android:textColor="@color/color_on_surface"
-        app:backgroundTint="@color/color_surface"
-        app:cornerRadius="@dimen/cornerRadius"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/menuGameButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/menuGameButton"
         android:layout_width="@dimen/menuButtonWidth"
         android:layout_height="65dp"
         android:fontFamily="@font/adlam_display"
-        android:text="@string/menuGameButtonText"
-        android:textColor="@color/color_on_surface"
-        app:backgroundTint="@color/color_surface"
-        app:cornerRadius="@dimen/cornerRadius"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/menuSettingsButton"
-        app:layout_constraintStart_toEndOf="@+id/menuHomeButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/menuSettingsButton"
-        android:layout_width="@dimen/menuButtonWidth"
-        android:layout_height="65dp"
-        android:fontFamily="@font/adlam_display"
-        android:text="@string/menuSettingsButtonText"
+        android:text="@string/homePlayButton"
         android:textColor="@color/color_on_surface"
         app:backgroundTint="@color/color_surface"
         app:cornerRadius="@dimen/cornerRadius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/menuGameButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95" />
 

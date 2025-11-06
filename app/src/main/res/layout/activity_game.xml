@@ -5,6 +5,54 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_background"
     tools:context=".GameActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleText"
+        android:layout_width="369dp"
+        android:layout_height="66dp"
+        android:background="@drawable/title"
+        android:fontFamily="@font/adlam_display"
+        android:textAlignment="center"
+        android:textColor="@color/color_on_surface"
+        android:textSize="50sp"
+        app:cornerRadius="@dimen/cornerRadius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        tools:text="@string/titleText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gameHomeButton"
+        android:layout_width="@dimen/menuButtonWidth"
+        android:layout_height="65dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/menuHomeButtonText"
+        android:textColor="@color/color_on_surface"
+        app:backgroundTint="@color/color_surface"
+        app:cornerRadius="@dimen/cornerRadius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gameSettingsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/gameSettingsButton"
+        android:layout_width="@dimen/menuButtonWidth"
+        android:layout_height="65dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/menuSettingsButtonText"
+        android:textColor="@color/color_on_surface"
+        app:backgroundTint="@color/color_surface"
+        app:cornerRadius="@dimen/cornerRadius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gameHomeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

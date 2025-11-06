@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_names">
+        <item>Default Covered</item>
+        <item>Default Uncovered</item>
+        <item>Default Mine (Red)</item>
+        <item>Default Suspected (Orange)</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Pink</item>
+    </string-array>
+
+    <array name="color_values">
+        <item>@color/color_surface</item>
+        <item>@color/color_surface_secondary</item>
+        <item>@color/color_accent_red</item>
+        <item>@color/color_accent_orange</item>
+        <item>@color/color_accent_yellow</item>
+        <item>@color/color_accent_green</item>
+        <item>@color/color_accent_blue</item>
+        <item>@color/color_accent_purple</item>
+        <item>@color/color_accent_pink</item>
+    </array>
+</resources>

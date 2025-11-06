@@ -32,17 +32,29 @@ public class ColorSettings {
     public int getCoveredCell() {
         return coveredCell;
     }
+    public void setCoveredCell(int coveredCell) {
+        this.coveredCell = coveredCell;
+    }
 
     public int getUncoveredCell() {
         return uncoveredCell;
+    }
+    public void setUncoveredCell(int uncoveredCell) {
+        this.uncoveredCell = uncoveredCell;
     }
 
     public int getSuspectedCell() {
         return suspectedCell;
     }
+    public void setSuspectedCell(int suspectedCell) {
+        this.suspectedCell = suspectedCell;
+    }
 
     public int getMine() {
         return mine;
+    }
+    public void setMine(int mine) {
+        this.mine = mine;
     }
 
     public Bundle getBundle() {

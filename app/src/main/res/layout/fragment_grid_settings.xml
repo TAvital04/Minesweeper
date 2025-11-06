@@ -47,7 +47,7 @@
         android:layout_height="0dp"
         android:layout_margin="15dp"
         android:background="@drawable/seekbar"
-        android:max="3"
+        android:max="2"
         android:progress="1"
         android:progressDrawable="@drawable/seekbar_track"
         android:thumb="@drawable/seekbar_thumb"

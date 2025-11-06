@@ -25,6 +25,13 @@ public class SettingsActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_settings);
 
+        // Instantiate game
+        if (savedInstanceState != null) {
+            game = Minesweeper.getFromBundle(savedInstanceState.getBundle("game"));
+        } else {
+            game = Minesweeper.getFromBundle(getIntent().getBundleExtra("game"));
+        }
+
         // Switch fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         if(savedInstanceState == null) {

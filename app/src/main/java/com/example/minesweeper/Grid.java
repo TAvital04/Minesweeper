@@ -3,6 +3,7 @@ package com.example.minesweeper;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Grid {
@@ -32,10 +33,8 @@ public class Grid {
     public CellStates[][] generateNewGameState(GridSettings gridSettings) {
         CellStates[][] result = new CellStates[gridSettings.getRows()][gridSettings.getColumns()];
 
-        for(CellStates[] row: result) {
-            for(CellStates cell: row) {
-                cell = CellStates.COVERED;
-            }
+        for(int i = 0; i < gridSettings.getRows(); i++) {
+            Arrays.fill(result[i], CellStates.COVERED);
         }
 
         double percentMines = gridSettings.getMines()/100.0;

@@ -95,4 +95,6 @@ public class SettingsActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         game = Minesweeper.getFromBundle(savedInstanceState.getBundle("game"));
     }
+
+
 }

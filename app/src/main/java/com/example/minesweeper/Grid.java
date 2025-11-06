@@ -64,6 +64,10 @@ public class Grid {
         return gameState;
     }
 
+    public GridSettings getGridSettings() {
+        return gridSettings;
+    }
+
     public Bundle getBundle() {
         Bundle result = new Bundle();
 

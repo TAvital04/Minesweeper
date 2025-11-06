@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
         game = new Minesweeper();
 
         // Navigate to settings
-        Intent settingsIntent = new Intent(this, SettingsActivity.class);
+        Intent gameIntent = new Intent(this, GameActivity.class);
 
-        Button settingsButton = findViewById(R.id.menuSettingsButton);
+        Button settingsButton = findViewById(R.id.menuGameButton);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                settingsIntent.putExtra("game", game.getBundle());
-                startActivity(settingsIntent);
+                gameIntent.putExtra("game", game.getBundle());
+                startActivity(gameIntent);
             }
         });
     }

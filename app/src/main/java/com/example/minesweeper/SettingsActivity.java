@@ -71,14 +71,14 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        // Navigate to home
-        Intent homeIntent = new Intent();
+        // Navigate to game
+        Intent gameIntent = new Intent();
 
-        Button homeButton = findViewById(R.id.settingsHomeButton);
+        Button homeButton = findViewById(R.id.settingsGameButton);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homeIntent.putExtra("game", game.getBundle());
+                gameIntent.putExtra("game", game.getBundle());
                 finish();
             }
         });

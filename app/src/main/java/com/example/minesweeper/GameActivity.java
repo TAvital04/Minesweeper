@@ -35,12 +35,24 @@ public class GameActivity extends AppCompatActivity {
         // Navigate to home
         Intent homeIntent = new Intent();
 
-        Button homeButton = findViewById();
+        Button homeButton = findViewById(R.id.gameHomeButton);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 homeIntent.putExtra("game", game.getBundle());
                 finish();
+            }
+        });
+
+        // Navigate to settings
+        Intent settingsIntent = new Intent(this, SettingsActivity.class);
+
+        Button settingsButton = findViewById(R.id.gameSettingsButton);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingsIntent.putExtra("game", game.getBundle());
+                startActivity(settingsIntent);
             }
         });
     }

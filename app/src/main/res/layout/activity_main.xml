@@ -14,6 +14,7 @@
         android:layout_height="66dp"
         android:background="@drawable/title"
         android:fontFamily="@font/adlam_display"
+        android:text="@string/titleText"
         android:textAlignment="center"
         android:textColor="@color/color_on_surface"
         android:textSize="50sp"
@@ -22,8 +23,7 @@
         app:layout_constraintEnd_toEndOf="@+id/menuSettingsButton"
         app:layout_constraintStart_toStartOf="@+id/menuHomeButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012"
-        tools:text="@string/titleText" />
+        app:layout_constraintVertical_bias="0.0500000" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/instructionsText"
@@ -33,6 +33,7 @@
         android:background="@drawable/instructions"
         android:fontFamily="@font/adlam_display"
         android:padding="20dp"
+        android:text="@string/homeInstructionsText"
         android:textAlignment="viewStart"
         android:textColor="@color/color_on_surface"
         android:textSize="18sp"
@@ -40,9 +41,7 @@
         app:layout_constraintBottom_toTopOf="@+id/menuGameButton"
         app:layout_constraintEnd_toEndOf="@+id/titleText"
         app:layout_constraintStart_toStartOf="@+id/titleText"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.050000012"
-        tools:text="@string/homeInstructionsText" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
